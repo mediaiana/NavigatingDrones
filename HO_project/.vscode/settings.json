@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "unordered_set": "cpp",
+        "vector": "cpp",
+        "cmath": "cpp",
+        "unordered_map": "cpp",
+        "utility": "cpp",
+        "queue": "cpp",
+        "iostream": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "disabled"
+}
