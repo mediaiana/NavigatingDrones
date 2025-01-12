@@ -69,7 +69,7 @@ struct hashFunction
 
 // A* algorithm implementation
 
-// the time complexity of the whole algorithm is O(alog(n)). a = rows * cols of the grid. 
+// the time complexity of the whole algorithm is O(alog(n)). a = rows * cols of the grid.  n is the number of nodes in the queue.
 // and the total time complexity is O(v * alog(n)) where v is the number of agents.
 // O(N) space complexity 
 vector<vector<pair<int, int>>> astar( vector<pair<int, int>> startPoint, const pair<int, int> goal)
