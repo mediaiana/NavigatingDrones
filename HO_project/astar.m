@@ -1,17 +1,19 @@
 % Define the binary grid
-grid = readmatrix("gridMap.txt");
+grid = readmatrix("/Users/AkmatovArtur/Documents/GitHub/NavigatingDrones/maze/gridMap.txt");
 disp(grid);
 % Define start points for the drones
 [startPoints, goal] = runMultipleDronesRRT(); % Each row is a start point [row, column]
- 
+
 disp('Starting algorithm...');
+startPoints = startPoints(:, [2, 1]); % Reorder columns: column 2 first, column 1 second
+goal = goal([2, 1]); % Swap row and column for the goal
 % Call the A* algorithm using the MEX function
 paths = cppastar(startPoints, goal); % `paths` will be a cell array
 disp('All drones paths found!');
 
 % Adjust paths for MATLAB's 1-based indexing
-adjusted_startPoints = startPoints +1; % Add 1 to start points
-adjusted_goal = goal +1;               % Add 1 to goal point
+adjusted_startPoints = startPoints + 1; % Add 1 to start points
+adjusted_goal = goal + 1;               % Add 1 to goal point
 
 % Adjust each path in the cell array
 adjusted_paths = cell(size(paths));
@@ -25,7 +27,7 @@ end
 
 % Display the grid
 figure;
-imagesc(grid);        % Visualize the grid
+plotObstacles(grid);      % Visualize the grid
 colormap([1 1 1; 0 0 0]); % Custom colormap: 1->white (free space), 0->black (obstacle)
 axis equal;           % Equal aspect ratio
 hold on;
