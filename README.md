@@ -46,6 +46,3 @@ run astar.m
 ## Contributors
 - Samir Ertürk
 - Ayana Mederbek kyzy
-
-## License
-This project is licensed under the MIT License.
