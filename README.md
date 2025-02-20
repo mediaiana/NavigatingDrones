@@ -26,7 +26,7 @@ Ensure you have MATLAB installed along with a compatible C++ compiler for MEX.
 ### Running the Project
 To execute the simulation, run the MATLAB script:
 ```matlab
-run main.m
+run astar.m
 ```
 
 ## Features
