@@ -46,6 +46,4 @@ run main.m
 - Samir Ertürk
 - Ayana Mederbek kyzy
 
-## License
-This project is licensed under the MIT License.
 
